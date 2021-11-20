@@ -1,0 +1,23 @@
+Package: ensimplR
+Title: Get gene information
+Version: 1.0.0
+Date: 2021-11-20
+Author: Matt Vincent <matt.vincent@jax.org> 
+Maintainer: Matt Vincent <matt.vincent@jax.org> 
+Description: Provide gene information from the ensimpl API.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.6.0)
+Imports:
+    dplyr (>= 1.0.7),
+    httr (>= 1.4.2),
+    jsonlite (>= 1.4.2),
+    magrittr (>= 2.0.1),
+    purrr (>= 0.3.4),
+    rlang (>= 0.4.12),
+    stringr (>= 1.4.0),
+    tibble (>= 3.1.6),
+    tictoc (>= 1.0.1)    
+RoxygenNote: 7.1.2
