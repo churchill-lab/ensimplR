@@ -9,7 +9,7 @@ library(tibble)
 library(tictoc)
 
 ENSIMPL_API_URL <- 'https://churchilllab.jax.org/ensimpl/api'
-#ENSIMPL_API_URL <- 'http://127.0.0.1:5000/api'
+#ENSIMPL_API_URL <- 'http://127.0.0.1:8000/api'
 
 fixSpecies <- function(species) {
     s <- NULL
@@ -17,10 +17,12 @@ fixSpecies <- function(species) {
     tryCatch(
         {
             s <- tolower(species)
-            if (s == "mm") {
-                s <- "Mm"
-            } else if (s == "hs") {
-                s <- "Hs"
+            if (s == 'mm') {
+                s <- 'Mm'
+            } else if (s == 'hs') {
+                s <- 'Hs'
+            } else if (s == 'rn') {
+                s <- 'Rn'
             }
         },
         error = function(cond) {
